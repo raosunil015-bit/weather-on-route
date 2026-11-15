@@ -6,8 +6,8 @@ import { useRouteWeather } from '../../hooks/useRouteWeather';
 
 function RouteWeatherForm() {
   const [locations, setLocations] = useState({
-    origin: { value: 'origin', selected: null },
-    destination: { value: 'destination', selected: null },
+    origin: { value: '', selected: null },
+    destination: { value: '', selected: null },
   });
   const {
     error,
