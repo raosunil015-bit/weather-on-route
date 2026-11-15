@@ -1,0 +1,201 @@
+.appShell {
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+.routeCard {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  overflow: visible;
+  border: 1px solid #e8ebf0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(32, 49, 77, 0.08);
+}
+
+.appHeader {
+  min-height: 74px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandMark {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #2864ed;
+  color: #fff;
+  font-size: 17px;
+  transform: rotate(-15deg);
+}
+
+.brandName {
+  color: #17233c;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.headerCaption {
+  margin: 0;
+  color: #748096;
+  font-size: 13px;
+}
+
+.routeForm {
+  padding: 20px 24px 12px;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 40px minmax(150px, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.swapButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  background: #fff;
+  color: #63718a;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.swapButton:hover {
+  background: #f3f6fc;
+  color: #2864ed;
+}
+
+.submitButton {
+  min-height: 46px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 10px;
+  background: #2864ed;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 150ms ease, opacity 150ms ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #1d53d0;
+}
+
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.routeSummary {
+  min-height: 36px;
+  padding: 0 24px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #748096;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.routeSummary > span:last-child {
+  min-width: 0;
+}
+
+.routeLine {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 1px;
+  background: #b7c6e4;
+}
+
+.feedback {
+  margin: 0 24px 18px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.errorMessage {
+  background: #fff0f2;
+  color: #b4233b;
+}
+
+@media (max-width: 760px) {
+  .appShell {
+    padding: 24px 14px;
+  }
+
+  .routeForm {
+    grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .submitButton {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .routeSummary {
+    padding: 0 16px 14px;
+  }
+
+  .feedback {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appShell {
+    padding: 14px 10px;
+  }
+
+  .routeCard {
+    border-radius: 14px;
+  }
+
+  .appHeader {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .headerCaption {
+    display: none;
+  }
+
+  .routeForm {
+    grid-template-columns: 1fr 38px;
+  }
+
+  .routeForm > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .swapButton {
+    grid-column: 2;
+    grid-row: 2;
+    width: 38px;
+  }
+
+  .routeForm > :nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+}
